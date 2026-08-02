@@ -139,3 +139,7 @@ clean: ## Clean build artifacts and test files
 	@$(GOCLEAN)
 	@rm -f $(COVERAGE_FILE) $(COVERAGE_HTML)
 	@echo "$(COLOR_GREEN)✓ Cleaned$(COLOR_RESET)"
+
+.PHONY: setup
+setup: ## Bootstrap repo: install git hooks
+	@scripts/setup.sh
